@@ -293,6 +293,11 @@ namespace RensaOSD
             {
                 this.roles.Add(role.id);
             }
+            if (this.roles.Contains(336))
+            {
+                this.roles.Remove(366);
+                this.roles.Add(335);
+            }
             this.executeDate = "";
             this.primaryUsers = pcLookup.primaryUsers;
             this.primaryUsersFull = null;
