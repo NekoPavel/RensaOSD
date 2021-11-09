@@ -291,12 +291,14 @@ namespace RensaOSD
             this.roles = new List<int>();
             foreach (Role role in pcLookup.roles)
             {
-                this.roles.Add(role.id);
-            }
-            if (this.roles.Contains(336))
-            {
-                this.roles.Remove(366);
-                this.roles.Add(335);
+                if (role.id == 336)
+                {
+                    this.roles.Add(335);
+                }
+                else
+                {
+                    this.roles.Add(role.id);
+                }
             }
             this.executeDate = "";
             this.primaryUsers = pcLookup.primaryUsers;
